@@ -1,7 +1,20 @@
 [extension]
 id = "bookmarks"
 name = "Bookmarks"
-version = "0.1.0"
-description = "Bookmarks extension for Biscuit"
-author = "biscuit-extensions"
+version = "0.2.0"
+description = "Line and file bookmark toggle, jumping, file bookmark registry, and session persistence"
+author = "tomlin7"
 icon = "icon.png"
+
+[dependencies]
+python = []
+tools = []
+
+[contributes]
+commands = [
+    { id = "bookmarks.toggle", title = "Bookmarks: Toggle Bookmark", category = "Bookmarks" },
+    { id = "bookmarks.next", title = "Bookmarks: Next Bookmark", category = "Bookmarks" },
+    { id = "bookmarks.prev", title = "Bookmarks: Previous Bookmark", category = "Bookmarks" },
+    { id = "bookmarks.clear_file", title = "Bookmarks: Clear Bookmarks in File", category = "Bookmarks" },
+    { id = "bookmarks.clear_all", title = "Bookmarks: Clear All Bookmarks", category = "Bookmarks" }
+]

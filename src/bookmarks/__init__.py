@@ -8,6 +8,8 @@ if typing.TYPE_CHECKING:
     from biscuit.api import ExtensionsAPI
 
 
-def setup(api: "ExtensionsAPI") -> None:
+def setup(api: "ExtensionsAPI") -> Bookmarks:
     """Entrypoint for Biscuit to load the extension."""
-    api.register("bookmarks", Bookmarks(api))
+    ext = Bookmarks(api)
+    api.register("bookmarks", ext)
+    return ext
